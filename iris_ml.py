@@ -37,7 +37,7 @@ for i in range(len(axes[1,:])):
     axes[1,i].set_xlabel(features[i])
 
 fig.suptitle(f"Real VS. Predicted Target of IRIS Dataset\nTotal Mispredictions: {np.count_nonzero(y != rpred)}")
-plt.yticks([0, 1, 2] ,labels=targets)
+plt.yticks(np.arange(len(targets)) ,labels=targets)
 axes[0,0].legend()
 axes[1,0].legend()
 plt.show()
